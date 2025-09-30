@@ -7,14 +7,12 @@ nombremagique = random.randrange(1,100)
 
 for i in range(0,7):
     entree_utilisateur=input("Choisissez un nombre parmi 1 et 100")
-    if entree_utilisateur != nombremagique:
-        print("Ce n'est pas la bonne réponse, réessayez !")
-    elif entree_utilisateur <=0:
-        print("Le chiffre est inférieur à 1 ! Réessayez !")
-    elif entree_utilisateur >100:
-        print("Le chiffre est supérieur à 100 ! Réessayez !")
+    if int(entree_utilisateur) >=1 and int(entree_utilisateur) <=100:
+        if entree_utilisateur != nombremagique:
+            print("Ce n'est pas la bonne réponse, réessayez !")
+        else:
+            print("BRAVO !! Vous avez deviné !")
+            break
     else:
-        print("BRAVO !! Vous avez deviné !")
-        break
-
+        print("Vous devez choisir un nombre entre 1 et 100 !!!")
 print("Le nombre magique était :"+str(nombremagique))
