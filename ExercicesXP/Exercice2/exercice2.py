@@ -30,4 +30,5 @@ elif human_age > 2:
 
 ages = [human_age, cat_age, dog_age]
 
+print("voici les ages des individus [age de l'humain, age du chat, age du chien] :")
 print(ages)
