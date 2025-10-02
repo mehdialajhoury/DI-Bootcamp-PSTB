@@ -6,10 +6,13 @@ import random
 nombremagique = random.randrange(1,100)
 
 for i in range(0,7):
-    entree_utilisateur=input("Choisissez un nombre parmi 1 et 100")
+    entree_utilisateur=input("Choisissez un nombre parmi 1 et 100. Vous avez 7 tentatives !")
     if int(entree_utilisateur) >=1 and int(entree_utilisateur) <=100:
         if entree_utilisateur != nombremagique:
-            print("Ce n'est pas la bonne réponse, réessayez !")
+            if int(entree_utilisateur) > nombremagique:
+                print("C'est moins !")
+            else:
+                print("C'est plus !")
         else:
             print("BRAVO !! Vous avez deviné !")
             break
